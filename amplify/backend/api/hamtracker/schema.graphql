@@ -1,0 +1,8 @@
+type Ham @model {
+  id: ID!
+  name: String!
+  phone: String!
+  invoiceNumber: String!
+  hamType: String!
+  collected: Boolean!
+}

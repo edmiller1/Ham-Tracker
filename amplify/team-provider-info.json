@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hamtracker-dev-224701-authRole",
+            "UnauthRoleArn": "arn:aws:iam::904478337127:role/amplify-hamtracker-dev-224701-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::904478337127:role/amplify-hamtracker-dev-224701-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-hamtracker-dev-224701-deployment",
+            "UnauthRoleName": "amplify-hamtracker-dev-224701-unauthRole",
+            "StackName": "amplify-hamtracker-dev-224701",
+            "StackId": "arn:aws:cloudformation:us-east-1:904478337127:stack/amplify-hamtracker-dev-224701/007f6a40-4142-11ec-ba7b-0eb6db23da45",
+            "AmplifyAppId": "d2djgr5meturdv"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2djgr5meturdv",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
