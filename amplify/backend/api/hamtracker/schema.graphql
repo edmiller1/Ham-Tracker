@@ -5,4 +5,5 @@ type Ham @model {
   invoiceNumber: String!
   hamType: String!
   collected: Boolean!
+  phonedClient: Boolean
 }

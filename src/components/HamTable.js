@@ -21,6 +21,23 @@ export const HamTable = ({ hams, setDeleting, fetchHams, searchValue }) => {
     fetchHams();
   };
 
+  const editHamPhoned = async (id) => {
+    const ham = hams.find((h) => h.id === id);
+    const editedHam = {
+      id: ham.id,
+      name: ham.name,
+      phone: ham.phone,
+      invoiceNumber: ham.invoiceNumber,
+      hamType: ham.hamType,
+      phonedClient: !ham.phonedClient,
+    };
+    await API.graphql({
+      query: updateHam,
+      variables: { input: editedHam },
+    });
+    fetchHams();
+  };
+
   const removeHam = async (id) => {
     try {
       const currentHam = hams.find((h) => (h.id = id));
@@ -71,6 +88,12 @@ export const HamTable = ({ hams, setDeleting, fetchHams, searchValue }) => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 upper tracking-wider"
                   >
+                    Phoned
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 upper tracking-wider"
+                  >
                     Collected?
                   </th>
                   <th
@@ -104,6 +127,16 @@ export const HamTable = ({ hams, setDeleting, fetchHams, searchValue }) => {
                       <td className="px-6 whitespace-nowrap">
                         <div className="text-sm text-gray-900">
                           {ham.hamType}
+                        </div>
+                      </td>
+                      <td className="px-6 whitespace-nowrap">
+                        <div className="text-sm text-gray-900">
+                          <input
+                            type="checkbox"
+                            className="form-checkbox w-5 h-5 cursor-pointer"
+                            defaultChecked={ham.phonedClient}
+                            onChange={() => editHamPhoned(ham.id)}
+                          />
                         </div>
                       </td>
                       <td className="whitespace-nowrap">

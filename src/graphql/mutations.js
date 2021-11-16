@@ -13,6 +13,7 @@ export const createHam = /* GraphQL */ `
       invoiceNumber
       hamType
       collected
+      phonedClient
       createdAt
       updatedAt
     }
@@ -30,6 +31,7 @@ export const updateHam = /* GraphQL */ `
       invoiceNumber
       hamType
       collected
+      phonedClient
       createdAt
       updatedAt
     }
@@ -47,6 +49,7 @@ export const deleteHam = /* GraphQL */ `
       invoiceNumber
       hamType
       collected
+      phonedClient
       createdAt
       updatedAt
     }

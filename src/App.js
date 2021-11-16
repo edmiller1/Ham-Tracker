@@ -27,6 +27,7 @@ function App() {
       setHams(hams);
       setLoading(false);
     } catch (error) {
+      console.log(error);
       throw new Error(`Failed to fetch hams: ${error}`);
     }
   };

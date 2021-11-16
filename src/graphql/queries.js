@@ -10,6 +10,7 @@ export const getHam = /* GraphQL */ `
       invoiceNumber
       hamType
       collected
+      phonedClient
       createdAt
       updatedAt
     }
@@ -29,6 +30,7 @@ export const listHams = /* GraphQL */ `
         invoiceNumber
         hamType
         collected
+        phonedClient
         createdAt
         updatedAt
       }
