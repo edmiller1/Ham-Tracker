@@ -41,7 +41,6 @@ export const HamTable = ({ hams, setDeleting, fetchHams, searchValue }) => {
   const removeHam = async (id) => {
     try {
       const currentHam = hams.find((h) => (h.id = id));
-      console.log(currentHam);
       await API.graphql({
         query: deleteHam,
         variables: { input: { id: currentHam.id } },

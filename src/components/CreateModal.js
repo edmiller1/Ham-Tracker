@@ -9,7 +9,7 @@ const initialState = {
   invoiceNumber: "",
   hamType: "",
   collected: false,
-  clientPhoned: false,
+  phonedClient: false,
 };
 
 export const CreateModal = ({ isOpen, setIsOpen, fetchHams }) => {
